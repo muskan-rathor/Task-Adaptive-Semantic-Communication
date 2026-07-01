@@ -63,7 +63,7 @@ The architecture jointly learns semantic representation, task-aware reasoning, a
 The overall workflow of the proposed framework is illustrated below.
 
 <p align="center">
-    <img src="images/system_model.png" width="650">
+    <img src="images/SystemModel.png" width="650">
 </p>
 
 ### Workflow Steps
