@@ -25,3 +25,33 @@ The proposed framework combines:
 - Task-Specific Decoders
 
 The framework was developed as part of our **B.Tech Thesis (BTP)** and evaluates robustness under varying communication constraints.
+
+---
+
+# 🏗️ System Architecture
+
+The proposed framework follows an **end-to-end semantic communication architecture** designed for efficient multi-task inference under communication constraints.
+
+The system is composed of three major components:
+
+### 📡 Transmitter
+- Shared CNN Semantic Encoder
+- Task Embedding Layer
+- Cross-Attention Module
+- Top-K Semantic Feature Selector
+
+### 📶 Communication Channel
+- Additive White Gaussian Noise (AWGN) Channel
+- Simulates noisy wireless communication environments
+
+### 🖥️ Receiver
+- Task Switch Router
+- Shape Decoder
+- Color Decoder
+- Speed Limit Decoder
+
+<p align="center">
+    <img src="images/architecture.png" width="1000">
+</p>
+
+The architecture jointly learns semantic representation, task-aware reasoning, and task-specific inference in an end-to-end manner, enabling reliable prediction even under noisy communication channels.
