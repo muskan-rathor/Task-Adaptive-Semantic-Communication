@@ -128,4 +128,82 @@ The semantic communication framework jointly performs three classification tasks
 The shared semantic encoder learns compact task-aware representations, while dedicated decoder heads perform inference for each individual task.
 
 ---
-   
+
+# ✨ Key Features
+
+- 🧠 **Shared CNN Semantic Encoder** for learning compact semantic representations.
+- 🎯 **Task-Adaptive Attention Module** that dynamically selects task-relevant semantic features.
+- 📡 **Semantic Communication Framework** that transmits only meaningful information instead of raw image data.
+- 📶 **AWGN Channel Simulation** to evaluate robustness under noisy wireless communication environments.
+- 🔄 **Multi-Task Learning** for simultaneous shape, color, and speed limit classification.
+- ⚡ **Task-Specific Decoder Heads** optimized for individual inference tasks.
+- 📉 **Top-K Semantic Feature Selection** to reduce communication overhead while preserving prediction accuracy.
+- 🚀 **End-to-End Training** using PyTorch.
+
+
+   ---
+
+# 📊 Experimental Results
+
+The proposed framework was evaluated using multiple performance metrics to validate its robustness and classification capability under semantic communication constraints.
+
+## Confusion Matrix
+
+The confusion matrix illustrates the classification performance across different traffic sign categories and highlights the model's ability to correctly distinguish between classes.
+
+<p align="center">
+<img src="images/confusion_matrix.png" width="70%">
+</p>
+
+---
+
+## ROC Curve
+
+The ROC curve demonstrates the discriminative capability of the proposed model. The high Area Under Curve (AUC) indicates strong classification performance.
+
+<p align="center">
+<img src="images/roc_curve.png" width="70%">
+</p>
+
+### 🔍 Key Observations
+
+- High classification accuracy across multiple traffic sign categories.
+- Robust semantic transmission even under noisy AWGN channel conditions.
+- Efficient task-aware feature selection using the attention module.
+- Compact semantic representations significantly reduce communication overhead.
+
+---
+
+# 🚀 Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/muskan-rathor/Task-Adaptive-Semantic-Communication.git
+```
+
+Move to the project directory:
+
+```bash
+cd Task-Adaptive-Semantic-Communication
+```
+
+Install dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+# ▶️ Usage
+
+Open the notebook in Google Colab or Jupyter Notebook.
+
+Run all cells sequentially to:
+
+- Load the dataset
+- Preprocess images
+- Train the semantic communication model
+- Evaluate performance
+- Visualize results
