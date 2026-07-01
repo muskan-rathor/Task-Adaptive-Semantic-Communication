@@ -9,6 +9,20 @@
 
 ---
 
+## 📑 Table of Contents
+
+- Project Overview
+- System Architecture
+- System Workflow
+- Dataset
+- Features
+- Experimental Results
+- Installation
+- Usage
+- Folder Structure
+- Research Paper
+- Authors
+
 ## 📌 Project Overview
 
 Traditional communication systems transmit every bit of information regardless of its importance.
@@ -50,9 +64,7 @@ The system is composed of three major components:
 - Color Decoder
 - Speed Limit Decoder
 
-<p align="center">
-    <img src="images/architecture.png" width="1000">
-</p>
+![Architecture](images/architecture.png)
 
 The architecture jointly learns semantic representation, task-aware reasoning, and task-specific inference in an end-to-end manner, enabling reliable prediction even under noisy communication channels.
 
@@ -67,7 +79,7 @@ The overall workflow of the proposed framework is illustrated below.
     
 </p>
 
-### Workflow Steps
+## ⚙️ Workflow Steps
 
 1. **Input Image**
    - A traffic sign image is provided as the input.
@@ -76,7 +88,7 @@ The overall workflow of the proposed framework is illustrated below.
    - A shared CNN encoder extracts a compact semantic representation from the input image.
 
 3.**Task-Adaptive Attention Module**
-   - The attention module dynamically identifies the semantic features required for the selected task.
+   - The Task-Adaptive Attention Module dynamically selects the most informative semantic features for the requested inference task before transmission.
 
 4. **Semantic Transmission**
    - Only the selected semantic representation is transmitted through an **AWGN channel**, reducing communication overhead.
@@ -89,3 +101,31 @@ The overall workflow of the proposed framework is illustrated below.
 
 6. **Prediction**
    - The framework generates the final prediction directly from the received semantic representation without reconstructing the original image.
+
+   
+---
+
+# 📂 Dataset
+
+The proposed framework is evaluated using the **German Traffic Sign Recognition Benchmark (GTSRB)** dataset, a widely used benchmark for traffic sign recognition.
+
+### Dataset Characteristics
+
+- 🚦 Traffic Sign Images
+- 🏷️ Multiple Traffic Sign Categories
+- 🔺 Shape Labels
+- 🎨 Color Labels
+- 🚗 Speed Limit Labels
+
+### Tasks Performed
+
+The semantic communication framework jointly performs three classification tasks:
+
+- Shape Classification
+- Color Classification
+- Speed Limit Classification
+
+The shared semantic encoder learns compact task-aware representations, while dedicated decoder heads perform inference for each individual task.
+
+---
+   
