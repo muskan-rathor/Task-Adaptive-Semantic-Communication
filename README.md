@@ -55,3 +55,36 @@ The system is composed of three major components:
 </p>
 
 The architecture jointly learns semantic representation, task-aware reasoning, and task-specific inference in an end-to-end manner, enabling reliable prediction even under noisy communication channels.
+
+---
+
+# 🔄 System Workflow
+
+The overall workflow of the proposed framework is illustrated below.
+
+<p align="center">
+    <img src="images/system_model.png" width="650">
+</p>
+
+### Workflow Steps
+
+1. **Input Image**
+   - A traffic sign image is provided as the input.
+
+2. **Semantic Encoding**
+   - A shared CNN encoder extracts a compact semantic representation from the input image.
+
+3.**Task-Adaptive Attention Module**
+   - The attention module dynamically identifies the semantic features required for the selected task.
+
+4. **Semantic Transmission**
+   - Only the selected semantic representation is transmitted through an **AWGN channel**, reducing communication overhead.
+
+5. **Task-Specific Decoding**
+   - Dedicated decoder heads perform inference for:
+     - Shape Classification
+     - Color Classification
+     - Speed Limit Classification
+
+6. **Prediction**
+   - The framework generates the final prediction directly from the received semantic representation without reconstructing the original image.
