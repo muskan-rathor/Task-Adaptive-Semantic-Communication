@@ -9,6 +9,12 @@
 
 ---
 
+## 🎯 Problem Statement
+
+Traditional communication systems transmit complete image information, leading to unnecessary communication overhead in bandwidth-constrained environments.
+
+This project addresses this limitation by transmitting only task-relevant semantic information, enabling efficient and reliable multi-task traffic sign classification under noisy wireless communication conditions.
+
 ## 📑 Table of Contents
 
 - Project Overview
@@ -152,7 +158,7 @@ The proposed framework was evaluated using multiple performance metrics to valid
 The confusion matrix illustrates the classification performance across different traffic sign categories and highlights the model's ability to correctly distinguish between classes.
 
 <p align="center">
-<img src="images/confusion_matrix.png" width="70%">
+<img src="images/ShapeConfusionMatrix.png" width="70%">
 </p>
 
 ---
@@ -162,7 +168,7 @@ The confusion matrix illustrates the classification performance across different
 The ROC curve demonstrates the discriminative capability of the proposed model. The high Area Under Curve (AUC) indicates strong classification performance.
 
 <p align="center">
-<img src="images/roc_curve.png" width="70%">
+<img src="images/ROC_Curve.png" width="70%">
 </p>
 
 ### 🔍 Key Observations
@@ -207,3 +213,78 @@ Run all cells sequentially to:
 - Train the semantic communication model
 - Evaluate performance
 - Visualize results
+
+  ---
+  ---
+
+# 📂 Project Structure
+
+```
+Task-Adaptive-Semantic-Communication
+│
+├── docs/
+│   └── Research_Paper.pdf
+│
+├── images/
+│   ├── architecture.png
+│   ├── system_model.png
+│   ├── confusion_matrix.png
+│   └── roc_curve.png
+│
+├── notebooks/
+│   └── semantic_communication.ipynb
+│
+├── models/
+│
+├── results/
+│
+├── README.md
+├── requirements.txt
+├── LICENSE
+└── .gitignore
+```
+---
+
+# 🔮 Future Work
+
+The proposed framework can be extended in several directions:
+
+- Support additional traffic sign attributes and recognition tasks.
+- Evaluate the framework under different wireless channel models (Rayleigh, Rician).
+- Optimize the model for deployment on edge and IoT devices.
+- Investigate transformer-based semantic encoders for richer feature extraction.
+- Extend semantic communication to autonomous driving and V2X communication scenarios.
+
+---
+
+# 📄 Research Paper
+
+This project was developed as part of our **B.Tech Thesis (BTP)** on semantic communication for intelligent transportation systems.
+
+The complete research paper describing the methodology, experiments, and results is available in:
+
+📂 `docs/Research_Paper.pdf`
+
+
+---
+
+# 👥 Authors
+
+Developed as a **B.Tech Thesis (BTP)** by our project team.
+
+My primary contributions include:
+
+- Deep Learning model implementation
+- Semantic communication pipeline development
+- Model training and evaluation
+- Experimental analysis
+- Documentation and GitHub repository
+
+---
+
+# 🙏 Acknowledgements
+
+- B.Tech Project Guide and Faculty Mentor
+- Project Team Members
+- German Traffic Sign Recognition Benchmark (GTSRB)
+- PyTorch Community
